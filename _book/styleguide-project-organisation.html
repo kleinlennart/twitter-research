@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 7 Styleguide &amp; Project Organisation | Twitter Research</title>
+  <meta name="description" content="This is a book about Twitter Research in R" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 7 Styleguide &amp; Project Organisation | Twitter Research" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is a book about Twitter Research in R" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 7 Styleguide &amp; Project Organisation | Twitter Research" />
+  
+  <meta name="twitter:description" content="This is a book about Twitter Research in R" />
+  
+
+<meta name="author" content="Lennart Klein" />
+
+
+<meta name="date" content="2021-01-29" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="common-task.html"/>
+<link rel="next" href="learning-resources.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Twitter Research</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
+<li class="chapter" data-level="2" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>2</b> Introduction</a></li>
+<li class="chapter" data-level="3" data-path="the-dataset.html"><a href="the-dataset.html"><i class="fa fa-check"></i><b>3</b> The Dataset</a></li>
+<li class="chapter" data-level="4" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a><ul>
+<li class="chapter" data-level="4.1" data-path="analysis.html"><a href="analysis.html#social-stats"><i class="fa fa-check"></i><b>4.1</b> Social Stats</a></li>
+<li class="chapter" data-level="4.2" data-path="analysis.html"><a href="analysis.html#sentiment"><i class="fa fa-check"></i><b>4.2</b> Sentiment</a></li>
+<li class="chapter" data-level="4.3" data-path="analysis.html"><a href="analysis.html#geocoding"><i class="fa fa-check"></i><b>4.3</b> Geocoding</a></li>
+<li class="chapter" data-level="4.4" data-path="analysis.html"><a href="analysis.html#user-classification"><i class="fa fa-check"></i><b>4.4</b> User Classification</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="packages-frameworks.html"><a href="packages-frameworks.html"><i class="fa fa-check"></i><b>5</b> Packages &amp; Frameworks</a></li>
+<li class="chapter" data-level="6" data-path="common-task.html"><a href="common-task.html"><i class="fa fa-check"></i><b>6</b> Common Task</a><ul>
+<li class="chapter" data-level="6.1" data-path="common-task.html"><a href="common-task.html#code-snippets"><i class="fa fa-check"></i><b>6.1</b> Code Snippets</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="styleguide-project-organisation.html"><a href="styleguide-project-organisation.html"><i class="fa fa-check"></i><b>7</b> Styleguide &amp; Project Organisation</a></li>
+<li class="chapter" data-level="8" data-path="learning-resources.html"><a href="learning-resources.html"><i class="fa fa-check"></i><b>8</b> Learning Resources</a></li>
+<li class="chapter" data-level="9" data-path="twitter-api.html"><a href="twitter-api.html"><i class="fa fa-check"></i><b>9</b> Twitter API</a><ul>
+<li class="chapter" data-level="9.1" data-path="twitter-api.html"><a href="twitter-api.html#getting-access"><i class="fa fa-check"></i><b>9.1</b> Getting Access</a></li>
+<li class="chapter" data-level="9.2" data-path="twitter-api.html"><a href="twitter-api.html#twurl"><i class="fa fa-check"></i><b>9.2</b> Twurl</a></li>
+<li class="chapter" data-level="9.3" data-path="twitter-api.html"><a href="twitter-api.html#from-api-to-r"><i class="fa fa-check"></i><b>9.3</b> From API to R</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="apendix-a.html"><a href="apendix-a.html"><i class="fa fa-check"></i><b>10</b> Apendix A</a><ul>
+<li class="chapter" data-level="10.1" data-path="apendix-a.html"><a href="apendix-a.html#ethics-in-social-media-research"><i class="fa fa-check"></i><b>10.1</b> Ethics in Social Media Research</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="apendix-a.html"><a href="apendix-a.html#takes-on-anonymisation"><i class="fa fa-check"></i><b>10.1.1</b> Takes on Anonymisation</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/kleinlennart/twitter-edu" target="blank">Our Research on GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Twitter Research</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="styleguide-project-organisation" class="section level1">
+<h1><span class="header-section-number">Chapter 7</span> Styleguide &amp; Project Organisation</h1>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="common-task.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="learning-resources.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ResearchWiki.pdf", "ResearchWiki.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

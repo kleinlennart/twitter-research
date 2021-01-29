@@ -1,0 +1,34 @@
+# Analysis {#analysis}
+
+## Social Stats
+
+
+
+## Sentiment
+- LIWC, SentiStrength
+
+
+
+
+## Geocoding
+- tidygeocoder
+
+- Methods
+
+- Limitations / Common Mistakes
+
+
+- OSM API
+
+
+
+
+## User Classification
+
+
+
+
+## NLP
+- Topic Modeling
+
+

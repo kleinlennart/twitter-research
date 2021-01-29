@@ -1,0 +1,450 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Twitter Research},
+  pdfauthor={Lennart Klein},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+\usepackage{booktabs}
+\usepackage[]{natbib}
+\bibliographystyle{apalike}
+
+\title{Twitter Research}
+\author{Lennart Klein}
+\date{2021-01-29}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\hypertarget{preface}{%
+\chapter{Preface}\label{preface}}
+
+Hey there!
+
+\hypertarget{intro}{%
+\chapter{Introduction}\label{intro}}
+
+This book serves as a handbook for Twitter Research in R.
+It was specifically developed for this research project .
+
+\hypertarget{dataset}{%
+\chapter{The Dataset}\label{dataset}}
+
+\hypertarget{variables}{%
+\section{Variables}\label{variables}}
+
+\hypertarget{aggregation-levels}{%
+\section{Aggregation Levels}\label{aggregation-levels}}
+
+\hypertarget{limitations}{%
+\section{Limitations}\label{limitations}}
+
+\hypertarget{analysis}{%
+\chapter{Analysis}\label{analysis}}
+
+\hypertarget{social-stats}{%
+\section{Social Stats}\label{social-stats}}
+
+\hypertarget{sentiment}{%
+\section{Sentiment}\label{sentiment}}
+
+\begin{itemize}
+\tightlist
+\item
+  LIWC, SentiStrength
+\end{itemize}
+
+\hypertarget{geocoding}{%
+\section{Geocoding}\label{geocoding}}
+
+\begin{itemize}
+\item
+  tidygeocoder
+\item
+  Methods
+\item
+  Limitations / Common Mistakes
+\item
+  OSM API
+\end{itemize}
+
+\hypertarget{user-classification}{%
+\section{User Classification}\label{user-classification}}
+
+\hypertarget{nlp}{%
+\section{NLP}\label{nlp}}
+
+\begin{itemize}
+\tightlist
+\item
+  Topic Modeling
+\end{itemize}
+
+\hypertarget{packages-frameworks}{%
+\chapter{Packages \& Frameworks}\label{packages-frameworks}}
+
+List of useful pack
+
+\hypertarget{targets}{%
+\section{Targets}\label{targets}}
+
+\hypertarget{tidyverse}{%
+\section{Tidyverse}\label{tidyverse}}
+
+\hypertarget{common-task}{%
+\chapter{Common Task}\label{common-task}}
+
+\hypertarget{code-snippets}{%
+\section{Code Snippets}\label{code-snippets}}
+
+\hypertarget{section}{%
+\subsubsection{}\label{section}}
+
+\hypertarget{the-research-project}{%
+\chapter{The Research Project}\label{the-research-project}}
+
+\hypertarget{styleguide}{%
+\section{Styleguide}\label{styleguide}}
+
+\hypertarget{coding-philosophy}{%
+\section{Coding Philosophy}\label{coding-philosophy}}
+
+\hypertarget{team-organisation}{%
+\section{Team Organisation}\label{team-organisation}}
+
+\hypertarget{learning-resources}{%
+\chapter{Learning Resources}\label{learning-resources}}
+
+\hypertarget{reporting}{%
+\section{Reporting}\label{reporting}}
+
+\hypertarget{r-markdown}{%
+\subsection{R Markdown}\label{r-markdown}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://rmarkdown.rstudio.com}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://rmarkdown.rstudio.com/gallery.html} (Collection of Books, Websites and More)
+  \item
+    \url{https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf} (RMarkdown Cheatsheet)
+  \end{itemize}
+\item
+  \url{https://bookdown.org/yihui/rmarkdown/} (``R Markdown: The Definitive Guide'', User Manual)
+\item
+  \url{https://bookdown.org/yihui/rmarkdown-cookbook/} (``R Markdown Cookbook'', advanced user manual)
+\item
+  \url{https://holtzy.github.io/Pimp-my-rmd/} (Tipps \& Tricks)
+\end{itemize}
+
+\hypertarget{knitr}{%
+\subsection{Knitr}\label{knitr}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://yihui.org/knitr/options/} (knitr options manual)
+\item
+  \url{https://monashdatafluency.github.io/r-rep-res/appendix.html\#long-list-of-} chunk-options (``Long list of chunk options'')
+\item
+  \url{https://pandoc.org/MANUAL.html\#options} (all available pandoc options for \texttt{pandoc\_args:\ {[}{]}})
+\end{itemize}
+
+\hypertarget{bookdown-blogdown}{%
+\subsection{Bookdown / Blogdown}\label{bookdown-blogdown}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://bookdown.org/yihui/bookdown/} (``bookdown: Authoring Books and Technical Documents with R Markdown'')
+\item
+  \url{https://bookdown.org/yihui/blogdown/} (``blogdown: Creating Websites with R Markdown'', User Manual)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html\#site-configuration} (\_site.yaml help)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{shiny}{%
+\subsection{Shiny}\label{shiny}}
+
+\hypertarget{dashboards}{%
+\subsection{Dashboards}\label{dashboards}}
+
+\hypertarget{html}{%
+\subsection{HTML}\label{html}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://validator.w3.org}
+\end{itemize}
+
+\hypertarget{r}{%
+\section{R}\label{r}}
+
+\begin{itemize}
+\item
+  \url{https://bookdown.org/csgillespie/efficientR/} (``Efficient R Programming'')
+\item
+\end{itemize}
+
+\hypertarget{data-science}{%
+\section{Data Science}\label{data-science}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://beanumber.github.io/mdsr2e/} (``Modern Data Science with R, 2nd edition'', great Data Science textbook)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://beanumber.github.io/sds192/schedule.html} (Data Science Online Course)
+  \end{itemize}
+\item
+  \url{https://r4ds.had.co.nz} (``R for Data Science'')
+\item
+  \url{https://github.com/rfordatascience/tidytuesday} (Coding Challenges for Practice)
+\end{itemize}
+
+\hypertarget{visualization-graphics}{%
+\section{Visualization \& Graphics}\label{visualization-graphics}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://clauswilke.com/dataviz/} (``Fundamentals of Data Visualization'', textbook)
+\item
+  \url{https://r-graphics.org} (``R Graphics Cookbook, 2nd edition'', textbook)
+\item
+  \url{https://www.r-graph-gallery.com} (Graph Inspirations)
+\item
+  \url{https://www.data-to-viz.com} (Plotting decision tree)
+\item
+  \url{https://ilias.uni-marburg.de/data/UNIMR/lm_data/lm_2092231/} (``Creating Publication Quality Graphics in R'')
+\end{itemize}
+
+\hypertarget{r-material}{%
+\section{R Material}\label{r-material}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://bookdown.org} (List of Books)
+\item
+  \url{https://csgillespie.github.io/efficientR/} (``Efficient R programming'')
+\item
+  \url{https://adv-r.hadley.nz} (``Advanced R'')
+\item
+  \url{https://r-pkgs.org} (``R Packages'')
+\item
+  \url{https://style.tidyverse.org} (``The tidyverse style guide'')
+\item
+  \url{https://rstudio.com/resources/cheatsheets/} (Cheat Sheet Collection)
+\item
+  \url{https://github.com/qinwf/awesome-R} (Resource list)
+\end{itemize}
+
+\hypertarget{git-github}{%
+\section{Git \& GitHub}\label{git-github}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://guides.github.com/introduction/flow/\#}:\textasciitilde:text=ProTip,a\%20feature\%20or\%20a\%20fix. (Understanding the GitHub flow in 5 min)
+\item
+  \url{https://try.github.io} (``Resources to learn Git'')
+\item
+  \url{https://happygitwithr.com} (``Happy Git and GitHub for the useR'')
+\end{itemize}
+
+\hypertarget{geotagging-geospatial-analysis}{%
+\section{Geotagging \& geospatial analysis}\label{geotagging-geospatial-analysis}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://geocompr.robinlovelace.net/} (``Geocomputation with R'', textbook)
+\end{itemize}
+
+\hypertarget{machine-learning}{%
+\section{Machine Learning}\label{machine-learning}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{http://faculty.marshall.usc.edu/gareth-james/ISL/} (``An Introduction to Statistical Learning'')
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{http://www-stat.stanford.edu/ElemStatLearn}
+  \end{itemize}
+\item
+  \url{https://www.tidymodels.org/learn/statistics/tidy-analysis/}
+\item
+  \url{https://scikit-learn.org/stable/user_guide.html}
+\item
+  \url{https://towardsdatascience.com/text-classification-in-python-dd95d264c802}
+\item
+  \url{https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html}
+\end{itemize}
+
+\hypertarget{twitter-api-tweet-json}{%
+\section{Twitter API \& Tweet JSON}\label{twitter-api-tweet-json}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/overview/intro-to-tweet-json}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/overview/user-object} (User Object)
+  \end{itemize}
+\item
+  \url{https://developer.twitter.com/en/solutions/academic-research/resources}
+\end{itemize}
+
+\hypertarget{twitter-legal-policies}{%
+\subsection{Twitter Legal Policies}\label{twitter-legal-policies}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-user_timeline}
+\end{itemize}
+
+\hypertarget{project-management}{%
+\section{Project Management}\label{project-management}}
+
+\hypertarget{targets}{%
+\subsection{\{Targets\}}\label{targets}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://wlandau.github.io/targets/reference/index.html}
+\end{itemize}
+
+\hypertarget{the-drake-package}{%
+\subsection{The \{Drake\} Package}\label{the-drake-package}}
+
+\begin{itemize}
+\tightlist
+\item
+  \url{https://books.ropensci.org/drake/} (The drake R Package User Manual)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    \url{https://books.ropensci.org/drake/index.html\#documentation} (Official Learning Resources)
+  \item
+    \url{https://books.ropensci.org/drake/plans.html\#plans} (Drake Plan Guide)
+  \end{itemize}
+\item
+  \url{https://ropensci.org/commcalls/2019-09-24/} (Talk by Drake creator Will Landau)
+\item
+  \url{https://www.milesmcbain.com/posts/the-drake-post/} (Introduction to \{Drake\})
+\item
+  \url{https://wlandau.shinyapps.io/drakeplanner/_w_88465da4/} (Shiny App to plan Drake Workflows)
+\end{itemize}
+
+\hypertarget{twitter-api}{%
+\chapter{Twitter API}\label{twitter-api}}
+
+\hypertarget{getting-access}{%
+\section{Getting Access}\label{getting-access}}
+
+\hypertarget{twurl}{%
+\section{Twurl}\label{twurl}}
+
+\hypertarget{from-api-to-r}{%
+\section{From API to R}\label{from-api-to-r}}
+
+\hypertarget{apendix-a}{%
+\chapter{Apendix A}\label{apendix-a}}
+
+\hypertarget{ethics-in-social-media-research}{%
+\section{Ethics in Social Media Research}\label{ethics-in-social-media-research}}
+
+\hypertarget{anonymisation}{%
+\subsection{Anonymisation}\label{anonymisation}}
+
+  \bibliography{book.bib,packages.bib}
+
+\end{document}
