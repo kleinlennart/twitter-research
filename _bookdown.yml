@@ -1,5 +1,20 @@
-book_filename: "ResearchWiki"
+book_filename: ResearchWiki
+repo: https://github.com/kleinlennart/twitter-research
 delete_merged_file: true
+output_dir: "docs"
+
 language:
+  label:
+    fig: "FIGURE "
+    tab: "TABLE "
   ui:
+    edit: "Edit"
     chapter_name: "Chapter "
+
+# Specify Order of rmd files
+# rmd_files: []
+  
+
+
+# new_session: yes
+# before_chapter_script: "_common.R"
