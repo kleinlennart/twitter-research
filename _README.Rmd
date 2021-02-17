@@ -1,0 +1,18 @@
+---
+output: 
+  github_document
+---
+
+<!-- README.md is generated from _README.Rmd -->
+
+```{r, echo=FALSE}
+knitr::opts_chunk$set(
+  eval = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+# Twitter Research in R
+
+Book based on R Markdown and **bookdown** (<https://github.com/rstudio/bookdown>)
