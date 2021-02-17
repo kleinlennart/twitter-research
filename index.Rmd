@@ -1,5 +1,5 @@
 --- 
-title: "Twitter Research"
+title: "Twitter Research in R"
 author: "Lennart Klein"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,12 +7,26 @@ documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "This is a book about Twitter Research in R"
-github-repo: kleinlennart/twitter-edu
+description: "A book about Twitter Research in R"
+github-repo: kleinlennart/twitter-research
 # cover-image: images/cover.jpg
+# url: 'https\://bookdown.org/yihui/bookdown/' # URL of book's website
+# favicon: images/favicon.png # A path to the "favorite icon"
 ---
 
-# Preface
+```{r setup, include=FALSE}
+# library(tidyverse)
+# lapply(c('DT', 'citr', 'formatR', 'svglite', 'rticles'), function(pkg) {
+#   if (system.file(package = pkg) == '') install.packages(pkg)
+# })
+```
+
+# Preface {-}
+
+```{r preface, include=FALSE}
+# knitr::include_graphics('images/cover.jpg', dpi = NA)
+```
+
 
 Hey there!
 
@@ -24,4 +38,11 @@ Hey there!
 <Team>
 
 <Project Photo>
+
+
+## About the Author {-}
+
+```{r profile, echo=FALSE, fig.height=1}
+# knitr::include_graphics("images/profile_lennart.png")
+```
 
