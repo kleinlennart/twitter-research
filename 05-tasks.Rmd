@@ -1,11 +1,89 @@
 # Common Task
 
-
-## Code Snippets
-
-
-#### 
-```{r}
-
+```{r taks-setup, include=FALSE}
+# to prevent errors vom not existing variables
+# FIXME: option set for this page or all chunks in book?
+knitr::opts_chunk$set(eval = FALSE)
 ```
 
+
+## Code Snippets {#code-snippets}
+
+```{r snippets}
+# Remove duplicated tweets
+dat %>% distinct(status_id, .keep_all = TRUE)
+# Alternatively
+dat %>% filter(!duplicated(status_id))
+```
+
+```{r}
+# Remove retweets from dataset
+dat %>% filter(!is_retweet)
+```
+
+
+```{r}
+# Round every numeric column in data frame to two digits (APA Standard)
+dat %>% mutate_if(is.numeric, round, digits = 2)
+```
+
+```{r}
+# Sort all columns alphabetically
+dat[, order(colnames(dat))]
+# Alternatively
+dat %>% select(sort(current_vars()))
+
+# Reorder each column alphabetically
+map_df(dat, function(col) {
+  sort(col, na.last = TRUE)
+})
+```
+
+```{r}
+# Group and mutate (useful with collapse pasting)
+group_by(status_id) %>%
+  mutate(
+    all_methods = paste(method, collapse = ", ")
+  )
+```
+
+<script src="https://gist.github.com/kleinlennart/1a4cd7a0721b31dcfb94e972c6534051.js"></script>
+
+
+## Regex Insights
+```{r}
+# Regex to match hashtags
+"#[[:alnum:]_]+"
+# Shorter synonym
+"#\\w+"
+```
+
+```{r}
+# Look for hashtags without overmatching
+str_detect(text, regex("#XXXX(\\W|$)", ignore_case = TRUE))
+# (\\W|$) means anything but word characters or a string ending
+```
+
+
+```{r}
+# Quick method to generate a longer regex query from a list of hashtags
+regex <- hashtags %>%
+  paste(collapse = "(\\W|$)|") %>%
+  paste0("(\\W|$)")
+```
+
+```{r}
+# Use `iconv` to retain the unicode hex for any character
+iconv("🇩🇪")
+# > "\U0001f1e9\U0001f1ea"
+```
+
+```{r}
+# Common text cleaning operation
+text %>%
+  tolower() %>%
+  str_replace_all("ä", "ae") %>%
+  str_replace_all("ö", "oe") %>%
+  str_replace_all("ü", "ue") %>%
+  str_replace_all("ß", "ss")
+```

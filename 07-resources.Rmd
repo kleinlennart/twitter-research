@@ -3,96 +3,133 @@
 ## Reporting
 
 ### R Markdown
-- https://rmarkdown.rstudio.com
-  - https://rmarkdown.rstudio.com/gallery.html (Collection of Books, Websites and More)
-  - https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf (RMarkdown Cheatsheet)
-- https://bookdown.org/yihui/rmarkdown/ ("R Markdown: The Definitive Guide", User Manual)
-- https://bookdown.org/yihui/rmarkdown-cookbook/ ("R Markdown Cookbook", advanced user manual)
-- https://holtzy.github.io/Pimp-my-rmd/ (Tipps & Tricks)
+
+-   <https://rmarkdown.rstudio.com>
+
+    -   <https://rmarkdown.rstudio.com/gallery.html> (Collection of Books, Websites and More)
+    -   <https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf> (RMarkdown Cheatsheet)
+
+-   <https://bookdown.org/yihui/rmarkdown/> ("R Markdown: The Definitive Guide", User Manual)
+
+-   <https://bookdown.org/yihui/rmarkdown-cookbook/> ("R Markdown Cookbook", advanced user manual)
+
+-   <https://holtzy.github.io/Pimp-my-rmd/> (Tipps & Tricks)
 
 ### Knitr
-- https://yihui.org/knitr/options/ (knitr options manual)
-- https://monashdatafluency.github.io/r-rep-res/appendix.html#long-list-of- chunk-options ("Long list of chunk options")
-- https://pandoc.org/MANUAL.html#options (all available pandoc options for `pandoc_args: []`)
+
+-   <https://yihui.org/knitr/options/> (knitr options manual)
+-   <https://monashdatafluency.github.io/r-rep-res/appendix.html#long-list-of-> chunk-options ("Long list of chunk options")
+-   <https://pandoc.org/MANUAL.html#options> (all available pandoc options for `pandoc_args: []`)
 
 ### Bookdown / Blogdown
-- https://bookdown.org/yihui/bookdown/ ("bookdown: Authoring Books and Technical Documents with R Markdown")
-- https://bookdown.org/yihui/blogdown/ ("blogdown: Creating Websites with R Markdown", User Manual)
-  - https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html#site-configuration (_site.yaml help)
+
+-   <https://bookdown.org/yihui/bookdown/> ("bookdown: Authoring Books and Technical Documents with R Markdown")
+
+-   <https://bookdown.org/yihui/blogdown/> ("blogdown: Creating Websites with R Markdown", User Manual)
+
+    -   <https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html#site-configuration> (\_site.yaml help)
 
 ### Shiny
+
+-   <https://mastering-shiny.org/index.html>
 
 ### Dashboards
 
 ### HTML
-- https://validator.w3.org
+
+-   <https://validator.w3.org>
 
 ## R
-- https://bookdown.org/csgillespie/efficientR/ ("Efficient R Programming")
-- 
 
+-   <https://bookdown.org/csgillespie/efficientR/> ("Efficient R Programming")
+-   <https://rstats.wtf> ("What They Forgot to Teach You About R")
 
 ## Data Science
-- https://beanumber.github.io/mdsr2e/ ("Modern Data Science with R, 2nd edition", great Data Science textbook)
-  - https://beanumber.github.io/sds192/schedule.html (Data Science Online Course)
-- https://r4ds.had.co.nz ("R for Data Science")
-- https://github.com/rfordatascience/tidytuesday (Coding Challenges for Practice)
+
+-   <https://beanumber.github.io/mdsr2e/> ("Modern Data Science with R, 2nd edition", great Data Science textbook)
+
+    -   <https://beanumber.github.io/sds192/schedule.html> (Data Science Online Course)
+
+-   <https://r4ds.had.co.nz> ("R for Data Science")
+
+-   <https://github.com/rfordatascience/tidytuesday> (Coding Challenges for Practice)
 
 ## Visualization & Graphics
-- https://clauswilke.com/dataviz/ ("Fundamentals of Data Visualization", textbook)
-- https://r-graphics.org ("R Graphics Cookbook, 2nd edition", textbook)
-- https://www.r-graph-gallery.com (Graph Inspirations)
-- https://www.data-to-viz.com (Plotting decision tree)
-- https://ilias.uni-marburg.de/data/UNIMR/lm_data/lm_2092231/ ("Creating Publication Quality Graphics in R")
+
+-   <https://clauswilke.com/dataviz/> ("Fundamentals of Data Visualization", textbook)
+-   <https://r-graphics.org> ("R Graphics Cookbook, 2nd edition", textbook)
+-   <https://www.r-graph-gallery.com> (Graph Inspirations)
+-   <https://www.data-to-viz.com> (Plotting decision tree)
+-   <https://ilias.uni-marburg.de/data/UNIMR/lm_data/lm_2092231/> ("Creating Publication Quality Graphics in R")
 
 ## R Material
-- https://bookdown.org (List of Books)
-- https://csgillespie.github.io/efficientR/ ("Efficient R programming")
-- https://adv-r.hadley.nz ("Advanced R")
-- https://r-pkgs.org ("R Packages")
-- https://style.tidyverse.org ("The tidyverse style guide")
-- https://rstudio.com/resources/cheatsheets/ (Cheat Sheet Collection)
-- https://github.com/qinwf/awesome-R (Resource list)
 
+-   <https://bookdown.org> (List of Books)
+-   <https://csgillespie.github.io/efficientR/> ("Efficient R programming")
+-   <https://adv-r.hadley.nz> ("Advanced R")
+-   <https://r-pkgs.org> ("R Packages")
+-   <https://style.tidyverse.org> ("The tidyverse style guide")
+-   <https://rstudio.com/resources/cheatsheets/> (Cheat Sheet Collection)
+-   <https://github.com/qinwf/awesome-R> (Resource list)
 
 ## Git & GitHub
-- https://guides.github.com/introduction/flow/#:~:text=ProTip,a%20feature%20or%20a%20fix. (Understanding the GitHub flow in 5 min)
-- https://try.github.io ("Resources to learn Git")
-- https://happygitwithr.com ("Happy Git and GitHub for the useR")
 
+-   <https://guides.github.com/introduction/flow/#> (Understanding the GitHub flow in 5 min)
+-   <https://try.github.io> ("Resources to learn Git")
+-   <https://happygitwithr.com> ("Happy Git and GitHub for the useR")
+-   <https://docs.github.com/en/actions> (GitHub actions for our Repo?)
 
 ## Geotagging & geospatial analysis
-- https://geocompr.robinlovelace.net/ ("Geocomputation with R", textbook)
+
+-   <https://geocompr.robinlovelace.net/> ("Geocomputation with R", textbook)
 
 ## Machine Learning
-- http://faculty.marshall.usc.edu/gareth-james/ISL/ ("An Introduction to Statistical Learning")
-  - http://www-stat.stanford.edu/ElemStatLearn 
-- https://www.tidymodels.org/learn/statistics/tidy-analysis/ 
-- https://scikit-learn.org/stable/user_guide.html
-- https://towardsdatascience.com/text-classification-in-python-dd95d264c802
-- https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html
 
+-   <http://faculty.marshall.usc.edu/gareth-james/ISL/> ("An Introduction to Statistical Learning")
+
+    -   <http://www-stat.stanford.edu/ElemStatLearn>
+
+-   <https://www.tidymodels.org/learn/statistics/tidy-analysis/>
+
+-   <https://scikit-learn.org/stable/user_guide.html>
+
+-   <https://towardsdatascience.com/text-classification-in-python-dd95d264c802>
+
+-   <https://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html>
 
 ## Twitter API & Tweet JSON
-- https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/overview/intro-to-tweet-json
-  - https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/overview/user-object (User Object)
-- https://developer.twitter.com/en/solutions/academic-research/resources
- 
-### Twitter Legal Policies
-- https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-user_timeline
 
+-   <https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/overview/intro-to-tweet-json>
+
+    -   <https://developer.twitter.com/en/docs/twitter-api/v1/data-dictionary/overview/user-object> (User Object)
+
+-   <https://developer.twitter.com/en/solutions/academic-research/resources>
+
+### Twitter Legal Policies
+
+-   <https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/api-reference/get-statuses-user_timeline>
 
 ## Project Management
 
 ### {Targets}
-- https://wlandau.github.io/targets/reference/index.html
+
+-   <https://wlandau.github.io/targets/reference/index.html>
 
 ### The {Drake} Package
-- https://books.ropensci.org/drake/ (The drake R Package User Manual)
-  - https://books.ropensci.org/drake/index.html#documentation (Official Learning Resources)
-  - https://books.ropensci.org/drake/plans.html#plans (Drake Plan Guide)
-- https://ropensci.org/commcalls/2019-09-24/ (Talk by Drake creator Will Landau)
-- https://www.milesmcbain.com/posts/the-drake-post/ (Introduction to {Drake})
-- https://wlandau.shinyapps.io/drakeplanner/_w_88465da4/ (Shiny App to plan Drake Workflows)
 
+-   <https://books.ropensci.org/drake/> (The drake R Package User Manual)
 
+    -   <https://books.ropensci.org/drake/index.html#documentation> (Official Learning Resources)
+    -   <https://books.ropensci.org/drake/plans.html#plans> (Drake Plan Guide)
+
+-   <https://ropensci.org/commcalls/2019-09-24/> (Talk by Drake creator Will Landau)
+
+-   <https://www.milesmcbain.com/posts/the-drake-post/> (Introduction to {Drake})
+
+-   <https://wlandau.shinyapps.io/drakeplanner/_w_88465da4/> (Shiny App to plan Drake Workflows)
+
+### Style
+
+-   [<https://style.tidyverse.org>](https://style.tidyverse.org){.uri} ("The tidyverse style guide")
+
+    -   use the {styler} package and setup a keyboard shortcut for easy formatting

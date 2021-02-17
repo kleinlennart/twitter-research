@@ -1,10 +1,14 @@
+## Bookdown
+*_cache
+*_files
+
+## R
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
 ## MacOS
-
 # General
 .DS_Store
 .AppleDouble

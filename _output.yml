@@ -1,16 +1,30 @@
 bookdown::gitbook:
+  # highlight: "tango"
   css: style.css
+  split_by: rmd
   config:
     toc:
+      collapse: section
       before: |
-        <li><a href="./">Twitter Research</a></li>
+        <li><strong><a href="./">Twitter Research in R</a></strong></li>
       after: |
         <li><a href="https://github.com/kleinlennart/twitter-edu" target="blank">Our Research on GitHub</a></li>
     download: ["pdf", "epub"]
+    sharing:
+      facebook: no
+      github: yes
+      twitter: yes
+    edit:
+      link: https://github.com/kleinlennart/twitter-research/edit/master/%s
+      text: "Edit"
+      
+      
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
   latex_engine: xelatex
   citation_package: natbib
   keep_tex: yes
+  
+
 bookdown::epub_book: default

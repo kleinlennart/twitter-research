@@ -3,3 +3,5 @@
 This book serves as a handbook for Twitter Research in R. 
 It was specifically developed for this research project <LINK>.
 
+
+## Why do Twitter Research?
