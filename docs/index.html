@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Twitter Research in R</title>
+  <meta name="description" content="A book about Twitter Research in R" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Twitter Research in R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A book about Twitter Research in R" />
+  <meta name="github-repo" content="kleinlennart/twitter-research" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Twitter Research in R" />
+  
+  <meta name="twitter:description" content="A book about Twitter Research in R" />
+  
+
+<meta name="author" content="Lennart Klein" />
+
+
+<meta name="date" content="2021-02-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="01-intro.html"/>
+<script src="libs/header-attrs-2.6/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">Twitter Research in R</a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the Author</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="01-intro.html"><a href="01-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="01-intro.html"><a href="01-intro.html#why-do-twitter-research"><i class="fa fa-check"></i><b>1.1</b> Why do Twitter Research?</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="02-dataset.html"><a href="02-dataset.html"><i class="fa fa-check"></i><b>2</b> The Dataset</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="02-dataset.html"><a href="02-dataset.html#custom-variables"><i class="fa fa-check"></i><b>2.0.1</b> Custom Variables</a></li>
+<li class="chapter" data-level="2.1" data-path="02-dataset.html"><a href="02-dataset.html#aggregation-levels"><i class="fa fa-check"></i><b>2.1</b> Aggregation Levels</a></li>
+<li class="chapter" data-level="2.2" data-path="02-dataset.html"><a href="02-dataset.html#limitations"><i class="fa fa-check"></i><b>2.2</b> Limitations</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="03-analysis.html"><a href="03-analysis.html"><i class="fa fa-check"></i><b>3</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="03-analysis.html"><a href="03-analysis.html#social-stats"><i class="fa fa-check"></i><b>3.1</b> Social Stats</a></li>
+<li class="chapter" data-level="3.2" data-path="03-analysis.html"><a href="03-analysis.html#sentiment"><i class="fa fa-check"></i><b>3.2</b> Sentiment</a></li>
+<li class="chapter" data-level="3.3" data-path="03-analysis.html"><a href="03-analysis.html#geocoding"><i class="fa fa-check"></i><b>3.3</b> Geocoding</a></li>
+<li class="chapter" data-level="3.4" data-path="03-analysis.html"><a href="03-analysis.html#user-classification"><i class="fa fa-check"></i><b>3.4</b> User Classification</a></li>
+<li class="chapter" data-level="3.5" data-path="03-analysis.html"><a href="03-analysis.html#nlp"><i class="fa fa-check"></i><b>3.5</b> NLP</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="04-packages.html"><a href="04-packages.html"><i class="fa fa-check"></i><b>4</b> Packages &amp; Frameworks</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="04-packages.html"><a href="04-packages.html#targets"><i class="fa fa-check"></i><b>4.1</b> Targets</a></li>
+<li class="chapter" data-level="4.2" data-path="04-packages.html"><a href="04-packages.html#tidyverse"><i class="fa fa-check"></i><b>4.2</b> Tidyverse</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="05-tasks.html"><a href="05-tasks.html"><i class="fa fa-check"></i><b>5</b> Common Task</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="05-tasks.html"><a href="05-tasks.html#code-snippets"><i class="fa fa-check"></i><b>5.1</b> Code Snippets</a></li>
+<li class="chapter" data-level="5.2" data-path="05-tasks.html"><a href="05-tasks.html#regex-insights"><i class="fa fa-check"></i><b>5.2</b> Regex Insights</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="06-project.html"><a href="06-project.html"><i class="fa fa-check"></i><b>6</b> The Research Project</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="06-project.html"><a href="06-project.html#styleguide"><i class="fa fa-check"></i><b>6.1</b> Styleguide</a></li>
+<li class="chapter" data-level="6.2" data-path="06-project.html"><a href="06-project.html#coding-philosophy"><i class="fa fa-check"></i><b>6.2</b> Coding Philosophy</a></li>
+<li class="chapter" data-level="6.3" data-path="06-project.html"><a href="06-project.html#team-organisation"><i class="fa fa-check"></i><b>6.3</b> Team Organisation</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="07-resources.html"><a href="07-resources.html"><i class="fa fa-check"></i><b>7</b> Learning Resources</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="07-resources.html"><a href="07-resources.html#reporting"><i class="fa fa-check"></i><b>7.1</b> Reporting</a>
+<ul>
+<li class="chapter" data-level="7.1.1" data-path="07-resources.html"><a href="07-resources.html#r-markdown"><i class="fa fa-check"></i><b>7.1.1</b> R Markdown</a></li>
+<li class="chapter" data-level="7.1.2" data-path="07-resources.html"><a href="07-resources.html#knitr"><i class="fa fa-check"></i><b>7.1.2</b> Knitr</a></li>
+<li class="chapter" data-level="7.1.3" data-path="07-resources.html"><a href="07-resources.html#bookdown-blogdown"><i class="fa fa-check"></i><b>7.1.3</b> Bookdown / Blogdown</a></li>
+<li class="chapter" data-level="7.1.4" data-path="07-resources.html"><a href="07-resources.html#shiny"><i class="fa fa-check"></i><b>7.1.4</b> Shiny</a></li>
+<li class="chapter" data-level="7.1.5" data-path="07-resources.html"><a href="07-resources.html#dashboards"><i class="fa fa-check"></i><b>7.1.5</b> Dashboards</a></li>
+<li class="chapter" data-level="7.1.6" data-path="07-resources.html"><a href="07-resources.html#html"><i class="fa fa-check"></i><b>7.1.6</b> HTML</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="07-resources.html"><a href="07-resources.html#r"><i class="fa fa-check"></i><b>7.2</b> R</a></li>
+<li class="chapter" data-level="7.3" data-path="07-resources.html"><a href="07-resources.html#data-science"><i class="fa fa-check"></i><b>7.3</b> Data Science</a></li>
+<li class="chapter" data-level="7.4" data-path="07-resources.html"><a href="07-resources.html#visualization-graphics"><i class="fa fa-check"></i><b>7.4</b> Visualization &amp; Graphics</a></li>
+<li class="chapter" data-level="7.5" data-path="07-resources.html"><a href="07-resources.html#r-material"><i class="fa fa-check"></i><b>7.5</b> R Material</a></li>
+<li class="chapter" data-level="7.6" data-path="07-resources.html"><a href="07-resources.html#git-github"><i class="fa fa-check"></i><b>7.6</b> Git &amp; GitHub</a></li>
+<li class="chapter" data-level="7.7" data-path="07-resources.html"><a href="07-resources.html#geotagging-geospatial-analysis"><i class="fa fa-check"></i><b>7.7</b> Geotagging &amp; geospatial analysis</a></li>
+<li class="chapter" data-level="7.8" data-path="07-resources.html"><a href="07-resources.html#machine-learning"><i class="fa fa-check"></i><b>7.8</b> Machine Learning</a></li>
+<li class="chapter" data-level="7.9" data-path="07-resources.html"><a href="07-resources.html#twitter-api-tweet-json"><i class="fa fa-check"></i><b>7.9</b> Twitter API &amp; Tweet JSON</a>
+<ul>
+<li class="chapter" data-level="7.9.1" data-path="07-resources.html"><a href="07-resources.html#twitter-legal-policies"><i class="fa fa-check"></i><b>7.9.1</b> Twitter Legal Policies</a></li>
+</ul></li>
+<li class="chapter" data-level="7.10" data-path="07-resources.html"><a href="07-resources.html#project-management"><i class="fa fa-check"></i><b>7.10</b> Project Management</a>
+<ul>
+<li class="chapter" data-level="7.10.1" data-path="04-packages.html"><a href="04-packages.html#targets"><i class="fa fa-check"></i><b>7.10.1</b> {Targets}</a></li>
+<li class="chapter" data-level="7.10.2" data-path="07-resources.html"><a href="07-resources.html#the-drake-package"><i class="fa fa-check"></i><b>7.10.2</b> The {Drake} Package</a></li>
+<li class="chapter" data-level="7.10.3" data-path="07-resources.html"><a href="07-resources.html#style"><i class="fa fa-check"></i><b>7.10.3</b> Style</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="08-twitter_api.html"><a href="08-twitter_api.html"><i class="fa fa-check"></i><b>8</b> Twitter API</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="08-twitter_api.html"><a href="08-twitter_api.html#getting-access"><i class="fa fa-check"></i><b>8.1</b> Getting Access</a></li>
+<li class="chapter" data-level="8.2" data-path="08-twitter_api.html"><a href="08-twitter_api.html#twurl"><i class="fa fa-check"></i><b>8.2</b> Twurl</a></li>
+<li class="chapter" data-level="8.3" data-path="08-twitter_api.html"><a href="08-twitter_api.html#from-api-to-r"><i class="fa fa-check"></i><b>8.3</b> From API to R</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="10-appendix.html"><a href="10-appendix.html"><i class="fa fa-check"></i><b>9</b> Apendix A</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="10-appendix.html"><a href="10-appendix.html#ethics-in-social-media-research"><i class="fa fa-check"></i><b>9.1</b> Ethics in Social Media Research</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="10-appendix.html"><a href="10-appendix.html#anonymisation"><i class="fa fa-check"></i><b>9.1.1</b> Anonymisation</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/kleinlennart/twitter-edu" target="blank">Our Research on GitHub</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Twitter Research in R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Twitter Research in R</h1>
+<p class="author"><em>Lennart Klein</em></p>
+<p class="date"><em>2021-02-17</em></p>
+</div>
+<div id="preface" class="section level1 unnumbered">
+<h1>Preface</h1>
+<p>Hey there!</p>
+<p><Decription></p>
+<p><Project>
+<Links></p>
+<p><Team></p>
+<p><Project Photo></p>
+<div id="about-the-author" class="section level2 unnumbered">
+<h2>About the Author</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="01-intro.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/kleinlennart/twitter-research/edit/master/index.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["ResearchWiki.pdf", "ResearchWiki.epub"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
